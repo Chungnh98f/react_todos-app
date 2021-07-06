@@ -1,25 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import ToDoList from "./components/ToDoList";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    return (
+        <div
+            style={{
+                backgroundColor: "#eee",
+                minHeight: "100vh",
+                marginTop: "-48px",
+                paddingTop: "48px",
+            }}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+            <ToDoList />
+        </div>
+    );
 }
 
 export default App;
