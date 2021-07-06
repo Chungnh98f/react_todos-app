@@ -1,5 +1,5 @@
-import { Button, Input } from "@material-ui/core";
-import React, { useState, useRef } from "react";
+import { Button, Container, Input, Grid } from "@material-ui/core";
+import React, { useRef, useState } from "react";
 import { v4 } from "uuid";
 
 function FormCreate(props) {
@@ -20,20 +20,27 @@ function FormCreate(props) {
     };
     return (
         <form onSubmit={handleFormSubmit}>
-            <Input
-                ref={inputRef}
-                type="text"
-                value={content}
-                onChange={(e) => setContent(e.target.value)}
-            />
-            <Button
-                size="small"
-                variant="outlined"
-                color="primary"
-                type="submit"
-            >
-                Add Todo
-            </Button>
+            <Grid container justify="center" spacing={1}>
+                <Grid item xs={6}>
+                    <Input
+                        fullWidth={true}
+                        ref={inputRef}
+                        type="text"
+                        value={content}
+                        onChange={(e) => setContent(e.target.value)}
+                    />
+                </Grid>
+                <Grid item xs={2}>
+                    <Button
+                        size="small"
+                        variant="outlined"
+                        color="primary"
+                        type="submit"
+                    >
+                        Add Todo
+                    </Button>
+                </Grid>
+            </Grid>
         </form>
     );
 }

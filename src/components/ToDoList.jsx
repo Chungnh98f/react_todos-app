@@ -44,7 +44,7 @@ export default function ToDoList() {
 
     return (
         <Container maxWidth="md">
-            <h1 style={{ margin: "12px" }}>Todos App</h1>
+            <h1 style={{ margin: "12px", textAlign: "center" }}>Todos App</h1>
             <FormCreate handleSubmit={addTodo} />
             {todos.map((todo) => (
                 <ToDoItem
